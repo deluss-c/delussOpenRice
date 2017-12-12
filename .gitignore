@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+*.so
+*.log
+
+.Python
+env/
+build/
+dist/

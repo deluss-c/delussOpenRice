@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='base.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Pro' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header>
+    <nav class="navigation-bar">
+        <p>DelussOpenRice</p>
+        <form action="/" id="get_restaurant" method=get>
+            <input type="text" name="name" placeholder="Search restaurant name, cuisine, food">
+            <input type="text" name="location" placeholder="District, Landmark, Street...">
+            <input type="submit" value="Submit">
+        </form>
+    </nav>
+</header>
+<div class="district-output">
+    {% if location %}
+    <h1>Restaurant at {{ location }}</h1>
+    {% endif %}
+</div>
+<div class="main-box">
+    {% if restaurants_list %}
+    {% for restaurant in restaurants_list %}
+    <div class="restaurant-box">
+        <h3> english name: {{ restaurant["english_name"] }}<br>
+            chinese name: {{ restaurant["chinese_name"] }}<br></h3>
+        <p>english address: {{ restaurant["english_address"] }}<br>
+            chinese address: {{ restaurant["chinese_address"] }}<br>
+            tags: {{ restaurant["tags"] }}<br>
+            number of photos: {{ restaurant["photo_number"] }}</p>
+    </div>
+    {% endfor %}
+    {% else %}
+    No result
+    {% endif %}
+</div>
+<footer class="footer-box">
+
+</footer>
+</body>
+</html>
