@@ -4,7 +4,7 @@ search results based on RESTful requests provided to the server.
 
 ## Installation
 1. `git clone https://github.com/deluss-c/delussOpenRice.git`
-2. `pip install -r requirement.txt`
+2. `pip install -r requirements.txt`
 3. `py run.py`
 
 ## Dependencies
