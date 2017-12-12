@@ -5,7 +5,6 @@ import urllib2
 import urllib
 from bs4 import BeautifulSoup
 import eventlet
-from eventlet.green import urllib2
 
 
 class openRiceScraper():
