@@ -9,7 +9,8 @@ search results based on RESTful requests provided to the server.
 
 ## Dependencies
 
-python 2.7
-Flask 0.12.2
-beautifulsoup4 4.5.1
-eventlet 0.21.0
+python 2.7,
+Flask 0.12.2,
+beautifulsoup4 4.5.1,
+eventlet 0.21.0,
+lxml 4.1.1
